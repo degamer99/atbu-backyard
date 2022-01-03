@@ -1,0 +1,137 @@
+/* general setting */
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+:root{
+	font-size: 16px;
+}
+a{
+	text-decoration: none;
+	display: inline-block;
+	padding: 3px 5px;
+}
+li{
+    list-style-type: none;
+}
+/* end of general settings */
+header{
+	position: sticky;
+	top: -1px;
+	width: 100%;
+	overflow: hidden;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   background-color: white;
+   box-shadow: 0px 3px 3px rgba( 230, 230, 230, 1);
+}
+header a{
+	font-size: .5em;
+	letter-spacing: 3px;
+}
+nav{
+    min-height: 100vh;
+    position: fixed;
+    z-index: 5;
+    padding: 1em;
+    padding-left: 2px;
+    background-color: lightblue;
+    box-shadow: 3px 0 1px rgba(200, 200, 200, .5),
+    5px 0 1px rgba(200, 200, 200, .2);
+    transform: scalex(0);
+}
+nav li{
+	padding: .5em;
+	margin: .5em;
+	margin-left: 1px;
+	border-radius: 5px;
+	background-color: white;
+}
+nav li li{
+	background-color: grey;
+	letter-spacing: 2px;
+}
+.head-banner{
+	margin: 1em;
+	display: grid;
+	grid-template-areas:
+	'sec1 sec3 sec3'
+	'sec2 sec3 sec3';
+	gap: 1em;
+}
+.head-banner img{
+	width: 100%.
+}
+.sec1, .sec2, .sec3{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	line-height:  1.5rem;
+}
+.sec1{
+	grid-area: sec1;
+   height: 20vh;
+   border: 1px solid black;
+   background: url("./img/dodge.jpeg");
+   background-size: cover;
+	background-position: center;
+}
+.sec2{
+	grid-area: sec2;
+	height: 20vh;
+	border: 1px solid black;
+	background: url("./img/dodge.jpeg");
+	background-size: cover;
+	background-position: center;
+}
+.sec3{
+	height: calc(40vh + 1em);
+	grid-area: sec3;
+	border: 1px solid black;
+	background: url("./img/dodge.jpeg");
+	background-size: cover;
+	background-position: center;
+	font-size: 2rem;
+}
+.sec3 h3{
+	font-size: 4rem;
+}
+.listings{
+	margin: 1em;
+	
+}
+.listings hr{
+	height: 5px;
+	background-color: black;
+	color: black;
+	margin: 0;
+	border: none;
+	outline: none;
+}
+.listings h3{
+	border: 1px solid black;
+	margin: 0;
+	padding: 5px 8px;
+	display: inline-block;
+}
+.listings ul{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+.listings ul li{
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	align-items: center;
+}
+@media(max-width: 700px){
+	.head-banner{
+		grid-template-areas:
+		'sec3 sec3'
+		'sec3 sec3'
+		'sec1 sec2';
+	}
+}
